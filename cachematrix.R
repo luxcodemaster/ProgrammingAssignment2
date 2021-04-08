@@ -1,7 +1,4 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## This function takes a matrix as an argument, stores it and returns a list of functions to apply on it.
+## makeCacheMatrix function takes a matrix as an argument, stores it and returns a list of functions to apply on it.
 ## x$getinverse will get the inverse matrix data
 ## x$setinverse will set the inverse matrix
 ## x$get will get the matrix data
@@ -22,13 +19,13 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This function argument is an object contains a matrix and returns a list of functions to apply on it.  The three functions used are:
+## cacheSolve has one argument of type makeCacheMatrix. The three functions of makeCacheMatrix x used are:
 ## x$getinverse will get the inverse matrix data from makeCacheMatrix
 ## x$setinverse will pass the inverse matrix from makeCacheMatrix
 ## x$get will get the matrix data
 ##
-## The function will see if the inverse data is present in the passed object. 
-## If not, it computes the inverse and then sets the result in the object.
+## The function will check if the inverse data is present in the passed object. 
+## If not, it computes the inverse and then sets the result in the makeCacheMatrix object.
 
 cacheSolve <- function(x, ...) {
   inv <- x$getinverse()
